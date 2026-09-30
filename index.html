@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="더웨이브는 문화기획, 광고대행(드라마·영화 제작지원, PPL), 콘텐츠 제작, 경영컨설팅을 아우르는 문화 콘텐츠 기업입니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="THE WAVE 더웨이브">
+<meta property="og:description" content="기획에서 실행까지, 가치의 흐름을 만드는 문화 콘텐츠 파트너">
+<meta property="og:url" content="https://thewave.kr/">
+<link rel="canonical" href="https://thewave.kr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0D12'/%3E%3Cpath d='M5 19c4-7 8-7 11 0s7 7 11 0' fill='none' stroke='%231E4FD8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>THE WAVE 더웨이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Gothic+A1:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: wide-set wordmark type over a live wave field; below, a strict 12-col grid of hairline-divided rows. Black/white with one cobalt accent. */
+:root{
+  --bg:#FAFAFA; --surface:#FFFFFF; --ink:#0B0D12; --muted:#5F6470; --line:#E3E5EA;
+  --accent:#1E4FD8; --accent-soft:#EAF0FD;
+  --c1:#1E4FD8; --c2:#F2542D; --c3:#0A9E86; --c4:#E8A100; --c1s:#EAF0FD; --c2s:#FDEDE8; --c3s:#E4F5F1; --c4s:#FDF4DE; --band:#0B0D12; --band-fg:#F1F2F5; --band-muted:#9097A5; --band-line:#262A33;
+  --f-wide:"Archivo","Gothic A1",system-ui,sans-serif;
+  --f-body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  --maxw:1200px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A0B0F; --surface:#12141A; --ink:#EEF0F4; --muted:#949AA7; --line:#23262E;
+  --accent:#6C92FF; --accent-soft:#16203A; --c1:#7C9CFF; --c2:#FF7A57; --c3:#3CCBB0; --c4:#FFC94A; --c1s:#17213D; --c2s:#34190F; --c3s:#0F2A25; --c4s:#30260C; --band:#12141A; --band-fg:#EEF0F4; --band-muted:#949AA7; --band-line:#2A2E38; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A0B0F; --surface:#12141A; --ink:#EEF0F4; --muted:#949AA7; --line:#23262E;
+  --accent:#6C92FF; --accent-soft:#16203A; --c1:#7C9CFF; --c2:#FF7A57; --c3:#3CCBB0; --c4:#FFC94A; --c1s:#17213D; --c2s:#34190F; --c3s:#0F2A25; --c4s:#30260C; --band:#12141A; --band-fg:#EEF0F4; --band-muted:#949AA7; --band-line:#2A2E38; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.025em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--accent);font-weight:500}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+/* LOGO SLOT: replace .logo contents with the business-card logo <img src="logo.svg" alt="THE WAVE"> */
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo b{font-family:var(--f-wide);font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:.02em}
+.logo span{font-size:12px;color:var(--muted);font-weight:500}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);border:1px solid var(--ink);white-space:nowrap;transition:background .2s,color .2s}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(56px,9vw,112px) 0;position:relative}
+.hero .eyebrow{display:block;margin-bottom:32px}
+.wordmark{font-family:var(--f-wide);font-stretch:125%;font-weight:800;font-size:clamp(52px,12.4vw,172px);line-height:.88;letter-spacing:-.035em;margin:0}
+.wordmark .dot{color:var(--accent)}
+.hero-row{display:grid;grid-template-columns:7fr 5fr;gap:48px;margin-top:48px;align-items:end}
+.hero-row h1{font-size:clamp(24px,3.2vw,38px);line-height:1.35;font-weight:700}
+.hero-row h1 em{font-style:normal;color:var(--accent)}
+.hero-side{display:grid;gap:24px}
+.hero-side p{color:var(--muted);font-size:16px;max-width:30em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+.field{display:block;width:100%;height:clamp(140px,18vw,220px);margin-top:56px}
+@media (max-width:820px){.hero-row{grid-template-columns:1fr;gap:28px}}
+
+/* section scaffolding */
+section{padding-block:clamp(80px,10vw,136px)}
+.head{display:grid;grid-template-columns:4fr 8fr;gap:48px;margin-bottom:64px}
+.head h2{font-size:clamp(28px,3.8vw,46px);line-height:1.25;font-weight:700}
+.head p{color:var(--muted);margin-top:16px;max-width:38em;font-size:17px}
+@media (max-width:860px){.head{grid-template-columns:1fr;gap:16px;margin-bottom:44px}}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+
+/* about */
+.statement{font-size:clamp(22px,2.6vw,30px);line-height:1.55;font-weight:500;max-width:30em}
+.statement mark{background:none;color:var(--accent)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:1px solid var(--ink)}
+.pillars div{padding:26px 28px 0 0;display:grid;gap:10px;align-content:start}
+.pillars div+div{padding-left:28px;border-left:1px solid var(--line)}
+.pillars .k{font-family:var(--f-wide);font-stretch:112%;font-weight:700;font-size:15px;letter-spacing:.02em}
+.pillars h3{font-size:20px;font-weight:700}
+.pillars p{color:var(--muted);font-size:15px}
+@media (max-width:760px){.pillars{grid-template-columns:1fr}.pillars div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:26px}}
+
+/* business */
+.biz{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.biz article{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(24px,3vw,36px);display:grid;grid-template-rows:auto auto 1fr auto;gap:14px;min-width:0;transition:border-color .25s}
+.biz article:hover{border-color:var(--accent)}
+.biz .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.biz .en{font-family:var(--f-wide);font-stretch:112%;font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.biz h3{font-size:clamp(24px,2.6vw,30px);font-weight:800}
+.biz p{color:var(--muted)}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:13px;font-weight:500;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+@media (max-width:720px){.biz{grid-template-columns:1fr}}
+
+/* clients */
+.clients{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.clients div{padding:28px 24px 28px 0;display:grid;gap:8px}
+.clients div+div{padding-left:24px;border-left:1px solid var(--line)}
+.clients h3{font-size:18px;font-weight:700}
+.clients p{color:var(--muted);font-size:14px}
+@media (max-width:900px){.clients{grid-template-columns:1fr 1fr}.clients div:nth-child(3){padding-left:0;border-left:0}.clients div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:520px){.clients{grid-template-columns:1fr}.clients div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* process */
+.process{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);counter-reset:s}
+.process li{counter-increment:s;padding:0 20px 0 0;display:grid;gap:10px;align-content:start;position:relative}
+.process li::before{content:"0" counter(s);font-family:var(--f-mono);font-size:12px;color:var(--accent);padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+.process li:last-child::before{border-bottom-color:var(--accent)}
+.process h3{font-size:18px;font-weight:700}
+.process p{color:var(--muted);font-size:14px}
+@media (max-width:900px){.process{grid-template-columns:1fr 1fr;row-gap:36px}}
+@media (max-width:520px){.process{grid-template-columns:1fr}}
+
+/* dark band (contact) */
+.band{background:var(--band);color:var(--band-fg)}
+.band .eyebrow{color:var(--band-muted)}
+.band .citem{background:transparent;border-color:var(--band-line)}
+.band .citem .r{color:var(--band-muted)}
+.band .copy{border-color:var(--band-line)}
+
+/* contact */
+.cta-block{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:start}
+.cta-block h2{font-size:clamp(32px,5vw,60px);line-height:1.15;font-weight:800}
+.cta-block h2 em{font-style:normal;color:var(--accent)}
+.clist{display:grid;gap:12px}
+.citem{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;min-width:0}
+.citem div{display:grid;gap:2px;min-width:0}
+.citem .r{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.citem .v{font-family:var(--f-wide);font-stretch:108%;font-size:20px;font-weight:600;overflow-wrap:anywhere}
+.copy{font:inherit;font-size:13px;font-weight:600;color:var(--accent);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+@media (max-width:860px){.cta-block{grid-template-columns:1fr;gap:32px}}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;font-size:13px;color:var(--muted)}
+.foot{display:grid;grid-template-columns:auto 1fr;gap:24px 48px;align-items:start}
+.fname{font-family:var(--f-body);font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.2}
+.foot dl{display:flex;flex-wrap:wrap;gap:6px 24px;margin:0}
+.foot dt{display:inline;color:var(--ink);font-weight:600}
+.foot dd{display:inline;margin:0 0 0 6px}
+.foot small{grid-column:2;font-size:12px}
+@media (max-width:640px){.foot{grid-template-columns:1fr}.foot small{grid-column:1}}
+
+/* color system */
+.dots{display:inline-flex;gap:5px;margin-right:12px;vertical-align:middle}
+.dots i{width:8px;height:8px;border-radius:50%;display:block}
+.dots i:nth-child(1),.stripe i:nth-child(1){background:var(--c1)}
+.dots i:nth-child(2),.stripe i:nth-child(2){background:var(--c2)}
+.dots i:nth-child(3),.stripe i:nth-child(3){background:var(--c3)}
+.dots i:nth-child(4),.stripe i:nth-child(4){background:var(--c4)}
+.wordmark{display:inline-block;background:linear-gradient(90deg,var(--ink) 0 58%,var(--c1) 58% 70%,var(--c3) 70% 84%,var(--c2) 84%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wordmark .dot{color:var(--c4)}
+.hero-row h1 em{color:var(--c2)}
+.statement mark{color:var(--c1)}
+.k1{color:var(--c1)}.k2{color:var(--c2)}.k3{color:var(--c3)}
+.pillars .k1{color:var(--c1)}.pillars .k2{color:var(--c2)}.pillars .k3{color:var(--c3)}
+.b1{--k:var(--c1);--ks:var(--c1s)}.b2{--k:var(--c2);--ks:var(--c2s)}.b3{--k:var(--c3);--ks:var(--c3s)}.b4{--k:var(--c4);--ks:var(--c4s)}
+.biz article{background:var(--ks);border-color:transparent}
+.biz article:hover{border-color:var(--k)}
+.biz .en{color:var(--k)}
+.biz article .tags li{background:var(--surface);color:var(--ink);border:1px solid color-mix(in srgb,var(--k) 35%,transparent)}
+.biz .top::after{content:"";width:34px;height:34px;border-radius:50%;background:var(--k);opacity:.9;flex:none}
+.clients h3{display:flex;align-items:center;gap:10px}
+.clients h3::before{content:"";width:10px;height:10px;border-radius:50%;flex:none}
+.clients .k1 h3::before{background:var(--c1)}.clients .k2 h3::before{background:var(--c2)}.clients .k3 h3::before{background:var(--c3)}.clients .k4 h3::before{background:var(--c4)}
+.clients .k1,.clients .k2,.clients .k3,.clients .k4{color:inherit}
+.process li:nth-child(1)::before{color:var(--c1);border-bottom-color:var(--c1)}
+.process li:nth-child(2)::before{color:var(--c2);border-bottom-color:var(--c2)}
+.process li:nth-child(3)::before{color:var(--c3);border-bottom-color:var(--c3)}
+.process li:nth-child(4)::before{color:var(--c4);border-bottom-color:var(--c4)}
+.process li:nth-child(5)::before{color:var(--ink);border-bottom-color:var(--ink)}
+.process li::before{border-bottom-width:4px}
+.band{position:relative}
+.stripe{display:grid;grid-template-columns:repeat(4,1fr);height:6px;position:absolute;inset:0 0 auto 0}
+.stripe i{display:block}
+.cta-block h2 em{color:var(--c4)}
+.btn:hover{background:var(--c2);border-color:var(--c2)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="THE WAVE 홈"><b>THE WAVE</b><span>더웨이브</span></a>
+    <ul>
+      <li><a href="#about">회사소개</a></li>
+      <li><a href="#business">사업영역</a></li>
+      <li><a href="#clients">고객</a></li>
+      <li><a href="#process">프로세스</a></li>
+    </ul>
+    <a class="btn" href="#contact">프로젝트 문의</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Culture Planning · Advertising · Content · Consulting</span>
+    <p class="wordmark" aria-hidden="true">THE WAVE<span class="dot">.</span></p>
+    <div class="hero-row">
+      <h1>기획에서 실행까지,<br>가치의 <em>흐름</em>을 만드는<br>문화 콘텐츠 파트너</h1>
+      <div class="hero-side">
+        <p>더웨이브는 문화기획, 광고대행, 콘텐츠 제작, 경영컨설팅을 아우르는 통합 솔루션 기업입니다. 전략 수립부터 현장 실행, 성과 관리까지 전 과정을 책임지며 전국의 공공기관, 기업, 브랜드와 함께합니다.</p>
+        <div class="hero-cta"><a class="btn" href="#contact">프로젝트 문의</a><a class="btn ghost" href="#business">사업영역 보기</a></div>
+      </div>
+    </div>
+  </div>
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+
+  <hr>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">About</span>
+        <div>
+          <p class="statement">하나의 파도가 큰 물결로 번지듯, 더웨이브는 <mark>잘 설계된 기획 하나</mark>가 사람과 시장을 움직인다고 믿습니다. 전략과 크리에이티브, 실행력을 결합해 고객이 목표한 성과를 만들어냅니다.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div>
+          <span class="k k1">STRATEGY</span>
+          <h3>전략 기획</h3>
+          <p>시장과 대상에 대한 분석을 바탕으로 목표를 정의하고, 실행 가능한 전략을 수립합니다.</p>
+        </div>
+        <div>
+          <span class="k k2">CREATIVE</span>
+          <h3>크리에이티브</h3>
+          <p>콘셉트 개발부터 연출, 영상, 디자인까지 메시지를 가장 효과적인 형태로 구현합니다.</p>
+        </div>
+        <div>
+          <span class="k k3">EXECUTION</span>
+          <h3>통합 실행</h3>
+          <p>기획, 제작, 운영, 홍보를 단일 창구로 수행해 일정과 품질, 예산을 일관되게 관리합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Business</span>
+        <div>
+          <h2>하나의 창구로 완성하는 통합 솔루션</h2>
+          <p>필요한 영역만 선택하거나 기획부터 성과 관리까지 전 과정을 맡기실 수 있습니다. 네 개의 사업 영역이 유기적으로 연결되어 일관된 결과를 만듭니다.</p>
+        </div>
+      </div>
+      <div class="biz">
+        <article class="b1">
+          <div class="top"><span class="en">Culture Planning</span></div>
+          <h3>문화기획</h3>
+          <p>공연, 페스티벌, 지역 축제, 기념식, 기업 행사 등 목적에 맞는 문화 프로그램을 기획하고 운영합니다. 콘셉트 설계와 출연진 구성, 무대 연출, 현장 운영 및 안전 관리까지 전 과정을 수행합니다.</p>
+          <ul class="tags"><li>공연·페스티벌</li><li>지역 축제</li><li>기업·공공 행사</li><li>출연진 섭외</li></ul>
+        </article>
+        <article class="b2">
+          <div class="top"><span class="en">Advertising</span></div>
+          <h3>광고대행</h3>
+          <p>드라마, 영화, 예능 등 방송 콘텐츠의 제작지원과 PPL을 기획·연결해 브랜드와 기관의 메시지를 작품 속에 자연스럽게 담습니다. 제작사 매칭부터 노출 기획, 계약, 성과 분석까지 일괄 대행하며, 디지털·오프라인 통합 캠페인과 언론 홍보도 함께 수행합니다.</p>
+          <ul class="tags"><li>드라마·영화 제작지원</li><li>방송 PPL·협찬</li><li>로케이션 유치</li><li>통합 캠페인</li><li>매체 기획·집행</li><li>PR·언론 홍보</li></ul>
+        </article>
+        <article class="b3">
+          <div class="top"><span class="en">Content Production</span></div>
+          <h3>콘텐츠제작</h3>
+          <p>브랜드 필름, 홍보 영상, 공연 실황, 유튜브·SNS 콘텐츠를 기획부터 촬영, 편집, 배포까지 원스톱으로 제작합니다. 제작지원 작품과 연계한 홍보 콘텐츠도 함께 제작합니다.</p>
+          <ul class="tags"><li>브랜드 필름</li><li>홍보 영상</li><li>디지털 콘텐츠</li><li>SNS 숏폼</li></ul>
+        </article>
+        <article class="b4">
+          <div class="top"><span class="en">Consulting</span></div>
+          <h3>경영컨설팅</h3>
+          <p>문화·관광·콘텐츠 분야의 사업 타당성 검토, 사업계획 수립, 브랜드 전략, 정부 및 지자체 공모사업 기획을 지원합니다. 제안에 그치지 않고 실행까지 연결합니다.</p>
+          <ul class="tags"><li>사업 타당성 검토</li><li>사업계획 수립</li><li>브랜드 전략</li><li>공모사업 기획</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" style="padding-block:0 clamp(80px,10vw,136px)">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:32px">
+        <span class="eyebrow">Clients</span>
+        <div><h2 style="font-size:clamp(22px,2.6vw,30px)">주요 고객군</h2></div>
+      </div>
+      <div class="clients">
+        <div class="k1"><h3>공공기관·지자체</h3><p>지역 축제와 문화 행사, 촬영지 유치, 관광 활성화</p></div>
+        <div class="k2"><h3>기업·브랜드</h3><p>방송 제작지원·PPL, 통합 광고 캠페인, 브랜드 행사</p></div>
+        <div class="k3"><h3>방송·미디어</h3><p>드라마·영화 제작지원, PPL·협찬 연계, 콘텐츠 공동 기획</p></div>
+        <div class="k4"><h3>아티스트·기획사</h3><p>공연 기획 및 운영, 아티스트 콘텐츠 제작</p></div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Process</span>
+        <div>
+          <h2>체계적인 5단계 프로세스</h2>
+          <p>하나의 팀이 프로젝트 전 과정을 일관되게 관리해 소통의 단계를 줄이고 결과물의 완성도를 높입니다.</p>
+        </div>
+      </div>
+      <ol class="process">
+        <li><h3>상담·진단</h3><p>프로젝트의 목적과 대상, 예산, 일정을 파악하고 핵심 과제를 정의합니다.</p></li>
+        <li><h3>전략·제안</h3><p>콘셉트와 실행 계획, 예산안을 담은 맞춤형 제안서를 제시합니다.</p></li>
+        <li><h3>준비·구성</h3><p>출연진과 제작 인력, 장소, 장비 등 실행 요소를 확정합니다.</p></li>
+        <li><h3>제작·운영</h3><p>현장 운영과 콘텐츠 제작, 매체 집행을 계획에 따라 수행합니다.</p></li>
+        <li><h3>성과 보고</h3><p>결과물과 성과 지표를 정리해 보고하고 향후 개선 방향을 제안합니다.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="band"><div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="wrap cta-block">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:20px">다음 물결을<br><em>함께</em> 만들어갑니다.</h2>
+        <p style="color:var(--band-muted);margin-top:20px;max-width:30em">문화기획, 광고, 콘텐츠 제작, 경영컨설팅 관련 문의를 보내주시면 검토 후 회신드리겠습니다.</p>
+      </div>
+      <div class="clist">
+        <div class="citem"><div><span class="r">TEL · 대표전화</span><span class="v">054-732-4363</span></div><button class="copy" data-t="054-732-4363">복사</button></div>
+        <div class="citem"><div><span class="r">PROJECT · 프로젝트 문의</span><span class="v">PD@thewave.kr</span></div><button class="copy" data-t="PD@thewave.kr">복사</button></div>
+        <div class="citem"><div><span class="r">BUSINESS · 제휴 문의</span><span class="v">CEO@thewave.kr</span></div><button class="copy" data-t="CEO@thewave.kr">복사</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="fname">더웨이브</span>
+    <dl>
+      <div><dt>대표</dt><dd>윤인선</dd></div>
+      <div><dt>대표전화</dt><dd>054-732-4363</dd></div>
+      <div><dt>사업자등록번호</dt><dd>308-09-53535</dd></div>
+      <div><dt>주소</dt><dd>경북 영덕군 영덕읍 천전길 64</dd></div>
+    </dl>
+    <small>© 2026 THE WAVE. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+/* copy buttons */
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.dataset.t;
+    var ok=function(){b.textContent='복사됨';setTimeout(function(){b.textContent='복사'},1600)};
+    var fb=function(){var v=b.parentNode.querySelector('.v');var r=document.createRange();r.selectNodeContents(v);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='선택됨';};
+    try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}
+  });
+});
+
+/* wave field */
+(function(){
+  var c=document.getElementById('field'); if(!c) return;
+  var ctx=c.getContext('2d'), dpr=Math.min(window.devicePixelRatio||1,2), w=0,h=0;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=c.getBoundingClientRect();w=r.width;h=r.height;c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function tok(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  var LINES=16, HL=[3,7,10,13];
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    var line=tok('--muted'), cols=[tok('--c1'),tok('--c2'),tok('--c3'),tok('--c4')];
+    for(var i=0;i<LINES;i++){
+      var p=i/(LINES-1), base=h*(.25+p*.6), amp=(10+p*26), k=(0.004+ p*0.0025), sp=t*0.00035*(1+p*.6);
+      ctx.beginPath();
+      for(var x=0;x<=w;x+=6){
+        var y=base+Math.sin(x*k+sp+i*.5)*amp+Math.sin(x*k*2.3-sp*1.4)*amp*.28;
+        x?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      var ci=HL.indexOf(i), hi=ci>-1;
+      ctx.strokeStyle=hi?cols[ci]:line;
+      ctx.globalAlpha=hi?.95:(.10+p*.18);
+      ctx.lineWidth=hi?2.2:1;
+      ctx.stroke();
+    }
+    ctx.globalAlpha=1;
+  }
+  size(); addEventListener('resize',function(){size(); if(reduce) draw(0)});
+  if(reduce){draw(0);return}
+  var vis=true; new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(c);
+  (function loop(t){ if(vis) draw(t); requestAnimationFrame(loop)})(0);
+})();
+</script>
+</body>
+</html>
