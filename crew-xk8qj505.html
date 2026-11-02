@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>제작진 공유 · 영해 이웃사촌마을 버스킹&amp;토크 콘서트 | THE WAVE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Gothic+A1:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FAFAFA;--surface:#FFFFFF;--ink:#0B0D12;--muted:#5F6470;--line:#E3E5EA;--accent:#1E4FD8;
+  --c1:#1E4FD8;--c2:#F2542D;--c3:#0A9E86;--c4:#E8A100;--c1s:#EAF0FD;--c2s:#FDEDE8;--c3s:#E4F5F1;--c4s:#FDF4DE;
+  --f-wide:"Archivo","Gothic A1",system-ui,sans-serif;
+  --f-body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+p{margin:0}
+h1,h2,h3{margin:0;letter-spacing:-.025em;text-wrap:balance}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dots{display:inline-flex;gap:5px;margin-right:12px;vertical-align:middle}
+.dots i{width:8px;height:8px;border-radius:50%;display:block}
+.dots i:nth-child(1){background:var(--c1)}.dots i:nth-child(2){background:var(--c2)}.dots i:nth-child(3){background:var(--c3)}.dots i:nth-child(4){background:var(--c4)}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+
+header{border-bottom:1px solid var(--line);background:var(--bg)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo b{font-family:var(--f-wide);font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:.02em}
+.logo span{font-size:12px;color:var(--muted);font-weight:500}
+.tag{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--ink);color:var(--bg)}
+
+.hero{padding-block:clamp(48px,7vw,96px) clamp(32px,4vw,48px)}
+.hero h1{font-size:clamp(30px,4.6vw,54px);line-height:1.2;font-weight:800;margin-top:20px}
+.hero p{color:var(--muted);margin-top:16px;max-width:40em}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:40px}
+.facts div{padding:20px 20px 0 0;display:grid;gap:4px;min-width:0}
+.facts div+div{padding-left:20px;border-left:1px solid var(--line)}
+.facts .r{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.facts .v{font-weight:700;font-size:17px}
+@media (max-width:640px){.facts{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:16px}}
+
+section{padding-block:clamp(48px,6vw,80px)}
+.head{display:grid;grid-template-columns:3fr 9fr;gap:40px;margin-bottom:32px}
+.head h2{font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weight:700}
+.head p{color:var(--muted);margin-top:12px;max-width:38em}
+@media (max-width:860px){.head{grid-template-columns:1fr;gap:12px}}
+
+.tt{width:100%;border-collapse:collapse;font-size:15px}
+.tt th,.tt td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.tt th{font-family:var(--f-mono);font-weight:500;font-size:13px;color:var(--muted);white-space:nowrap;width:140px}
+
+.stories{display:grid;gap:16px}
+.story{background:var(--ks);border-radius:6px;padding:clamp(22px,3vw,36px);display:grid;gap:14px}
+.b1{--k:var(--c1);--ks:var(--c1s)}.b2{--k:var(--c2);--ks:var(--c2s)}.b3{--k:var(--c3);--ks:var(--c3s)}.b4{--k:var(--c4);--ks:var(--c4s)}
+.story .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.story .no{font-family:var(--f-mono);font-size:13px;color:var(--k);letter-spacing:.08em}
+.story .st{font-size:13px;font-weight:600;padding:3px 12px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in srgb,var(--k) 40%,transparent)}
+.story h3{font-size:clamp(20px,2.4vw,26px);font-weight:800}
+.story .who{color:var(--muted);font-size:14px}
+.story .body{display:grid;gap:10px;max-width:46em}
+.story.empty{background:transparent;border:1px dashed #C9CDD5}
+.story.empty .body{color:var(--muted)}
+
+.crew-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.crew-list div{padding:18px 18px 18px 0;border-bottom:1px solid var(--line);display:grid;gap:2px}
+.crew-list .r{font-size:13px;color:var(--muted)}
+.crew-list .v{font-weight:700}
+@media (max-width:760px){.crew-list{grid-template-columns:1fr 1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <span class="logo"><b>THE WAVE</b><span>더웨이브</span></span>
+    <span class="tag">제작진 전용</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Production Room · 제작진 공유</span>
+    <h1>영해 이웃사촌마을<br>버스킹&amp;토크 콘서트</h1>
+    <p>제작진이 같은 내용을 보고 움직일 수 있도록 일정, 사연, 출연·제작 라인업을 한 곳에 모았습니다. 이 링크는 제작진에게만 공유해 주세요.</p>
+    <div class="facts">
+      <div><span class="r">DATE</span><span class="v">2026. 11. 18. (수)</span></div>
+      <div><span class="r">SHOW</span><span class="v">17:00 ~ 19:00</span></div>
+      <div><span class="r">VENUE</span><span class="v">영해면 예주고을</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Day Schedule</span><div><h2>행사 당일 일정</h2></div></div>
+      <table class="tt">
+        <tbody>
+          <tr><th>13:00 ~ 15:00</th><td>DK 이웃사촌마을지원센터 방문, 근대역사거리·영해 일대 촬영 / 같은 시간 음향·영상 세팅</td></tr>
+          <tr><th>14:00</th><td>이웃사촌마을 자율공모사업 성과발표회</td></tr>
+          <tr><th>16:00 ~ 16:30</th><td>가수 리허설 (DK, 전철민, 연예진)</td></tr>
+          <tr><th>16:30 ~ 17:00</th><td>사전 스몰토크 — 군수·군의장·도의원, 사회 MC 하루</td></tr>
+          <tr><th>17:00 ~ 19:00</th><td>버스킹&amp;토크 콘서트 — DK '심'으로 오프닝, 사연 다섯 편과 라이브 공연</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Stories</span><div><h2>다섯 개의 사연</h2><p>위기와 회복, 정착, 영해의 어제와 내일, 장터의 일상, 다음 세대의 꿈 순서로 이어집니다.</p></div></div>
+      <div class="stories">
+        <article class="story b2">
+          <div class="top"><span class="no">STORY 01</span><span class="st">확정</span></div>
+          <h3>어린 나이에도 용기를 내어준 임지호 군의 사연</h3>
+          <p class="who">주인공 · 임지호 (영해중학교 3학년)</p>
+          <div class="body">
+            <p>2025년 3월 22일, 의성에서 시작된 산불은 거센 바람을 타고 안동, 청송, 영양을 거쳐 25일 밤 영덕까지 번졌습니다. 불길은 반나절 만에 50km를 넘어 동해안까지 내달렸습니다.</p>
+            <p>경북 다섯 개 시·군이 함께 피해를 입었지만, 그중에서도 영덕은 사람과 집을 가장 많이 잃은 곳이었습니다. 영덕에서만 열 분이 목숨을 잃었고, 1,200채가 넘는 집이 불에 탔습니다. 노물항에 매어 둔 어선들까지 불길에 휩쓸렸습니다.</p>
+            <p><b>그런데 그 캄캄한 밤에도 영덕에는 이웃을 먼저 챙긴 사람들이 있었습니다.</b></p>
+            <p>축산면 경정3리에서는 이장님과 어촌계장님, 그리고 마을에서 함께 일하던 인도네시아 선원 수기안토 씨가 불길이 밀려오는 걸 먼저 알아채고 집집마다 주민들을 깨워 대피시켰습니다. 보이지 않는 할머니를 찾아 집 안까지 들어가 업고 나오기도 했습니다.</p>
+            <p><b>그리고 그날 밤, 영해중학교 2학년, 열네 살이던 임지호 군이 있었습니다.</b></p>
+            <p>대피하던 중 지호 군은 미처 빠져나오지 못한 동네 어르신들을 보고 그냥 지나치지 않았습니다. 한 분 한 분 모시고 나왔고, 거동이 불편한 어르신은 직접 등에 업고 안전한 곳까지 옮겼습니다. 그렇게 지호 군이 구한 주민이 모두 네 분입니다.</p>
+            <p>이 일이 알려지면서 지호 군은 그해 8월 15일 광화문광장에서 열린 대통령 국민 임명식에 국민 대표 80명 중 한 명으로 함께했습니다.</p>
+            <p>지금은 영해중학교 3학년이 된 지호 군을 이번 콘서트 첫 번째 사연의 주인공으로 모십니다. 가장 큰 아픔을 겪은 영덕이 다시 일어설 수 있었던 건, 그날 밤 서로를 먼저 챙긴 이웃들이 있었기 때문입니다.</p>
+          </div>
+        </article>
+        <article class="story empty b1">
+          <div class="top"><span class="no">STORY 02</span><span class="st">사연 정리 중</span></div>
+          <h3>영해에 뿌리내리다 — 창업자의 사연</h3>
+          <div class="body"><p>외지에서 와서 영해에 가게나 사업을 열고 자리 잡은 창업자의 이야기. 사연 정리 후 채워집니다.</p></div>
+        </article>
+        <article class="story b3">
+          <div class="top"><span class="no">STORY 03</span><span class="st">확정</span></div>
+          <h3>영해를 누구보다 아끼는 성내1리 신현용 이장님의 사연</h3>
+          <p class="who">주인공 · 신현용 (영해면 성내1리 이장)</p>
+          <div class="body">
+            <p>영해는 고려와 조선을 거치며 예주목과 영해부가 자리했던 영덕 북부의 중심지였습니다. 고려 말에 쌓은 영해읍성이 지금도 마을 한가운데 남아 있고, 1919년 3월 18일 영해장터에서는 독립만세의 함성이 울려 퍼졌습니다.</p>
+            <p>그 영해에서 나고 자라 지금까지 영해를 지켜 온 사람이 있습니다. 성내1리 신현용 이장님입니다. 영해의 골목과 장터, 옛 이야기까지 이장님만큼 잘 아는 사람도 드뭅니다. 그리고 누구보다 영해를 자랑스러워합니다.</p>
+            <p><b>이장님이 기억하는 영해는 늘 사람으로 북적이던 곳이었습니다.</b></p>
+            <p>하지만 세월이 흐르며 젊은 사람들이 하나둘 떠났고, 북적이던 거리도 예전 같지 않게 되었습니다.</p>
+            <p>그 사이 영해를 다시 살리기 위한 사업들이 여러 해에 걸쳐 이어져 왔습니다. 이웃사촌마을 확산사업, 도시재생 사업, 영해장터거리 근대역사문화공간 조성, 농촌중심지 활성화 사업이 지금도 진행 중입니다. 올해는 영해읍성과 장터거리를 전국 첫 ‘근현대 문화유산 지구’로 지정하는 절차도 시작됐습니다.</p>
+            <p><b>이장님에게는 바람이 있습니다.</b></p>
+            <p>이 사업들이 잘 뿌리내리고 영덕, 그리고 영해라는 이름이 전국에 널리 알려져서, 예전처럼 사람으로 북적이고 활력이 넘치는 곳이 되는 것입니다.</p>
+            <p>그리고 오늘 이 자리에 함께한 가수분들과 스태프, 멀리서 찾아온 팬분들까지 모든 분들이 영해의 추억을 가득 담아 가셨으면 합니다. 그 추억이 또 많은 분들에게 전해져서, 영해의 이야기와 콘텐츠가 넘쳐나는 날이 오기를 바랍니다.</p>
+          </div>
+        </article>
+        <article class="story empty b4">
+          <div class="top"><span class="no">STORY 04</span><span class="st">사연 정리 중</span></div>
+          <h3>장터의 사람들 — 전통시장 상인의 사연</h3>
+          <div class="body"><p>영해장 상인과 장 보러 오는 동네 분들의 정과 웃음. 사연 정리 후 채워집니다.</p></div>
+        </article>
+        <article class="story b1">
+          <div class="top"><span class="no">STORY 05</span><span class="st">확정</span></div>
+          <h3>기타리스트를 꿈꾸는 김도년 학생의 사연</h3>
+          <p class="who">주인공 · 김도년 (영해고등학교 3학년)</p>
+          <div class="body">
+            <p>영해고등학교 3학년 김도년 학생의 꿈은 기타리스트입니다.</p>
+            <p>기타 하나를 붙잡고 꿈을 키워 온 도년 학생은 올해 용인대학교 실용음악학과에 수시전형으로 합격했습니다.</p>
+            <p><b>그리고 내일, 11월 19일은 대학수학능력시험 날입니다.</b></p>
+            <p>지금도 마지막 정리에 한창일 친구들에게는 조금 미안한 마음이지만, 도년 학생은 한결 가벼운 마음으로 오늘 이 자리에 함께했습니다.</p>
+            <p><b>도년 학생에게는 꿈이 있습니다.</b></p>
+            <p>DK 형처럼 실력 있고 유명한 가수들과 함께 무대를 만드는 기타리스트가 되는 것입니다. 오늘 이 시간이 그 시작이 되어, 지금 뒤에서 멋지게 연주해 주시는 밴드분들처럼 큰 무대에 서는 날을 꿈꿉니다.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Line-up</span><div><h2>출연·제작 라인업</h2></div></div>
+      <div class="crew-list">
+        <div><span class="r">총괄 프로듀서</span><span class="v">더웨이브 윤인선</span></div>
+        <div><span class="r">기획</span><span class="v">더웨이브 윤태원</span></div>
+        <div><span class="r">연출프로덕션</span><span class="v">끼리끼리코퍼레이션 이무녕</span></div>
+        <div><span class="r">MC·가수</span><span class="v">DK (디셈버)</span></div>
+        <div><span class="r">가수</span><span class="v">전철민, 연예진</span></div>
+        <div><span class="r">밴드마스터</span><span class="v">핫로드사운즈 이기현</span></div>
+        <div><span class="r">음향·사전MC</span><span class="v">하루컴퍼니 (MC 하루)</span></div>
+        <div><span class="r">언론·홍보</span><span class="v">하이스타16컴퍼니 함성일</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 THE WAVE · 제작진 전용 페이지 — 외부 공유를 삼가 주세요.</div>
+</footer>
+</body>
+</html>
