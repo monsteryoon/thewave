@@ -72,6 +72,12 @@ section{padding-block:clamp(48px,6vw,80px)}
 .crew-list .v{font-weight:700}
 @media (max-width:760px){.crew-list{grid-template-columns:1fr 1fr}}
 
+.shoot{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.shoot li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px 24px;display:grid;gap:8px;align-content:start}
+.shoot .n{font-family:var(--f-mono);font-size:13px;color:var(--accent);letter-spacing:.08em}
+.shoot h3{font-size:19px;font-weight:800}
+.shoot p{color:var(--ink);font-size:15px}
+@media (max-width:760px){.shoot{grid-template-columns:1fr}}
 .cue{margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
 .cue img{display:block;width:100%;height:auto}
 .cue figcaption{font-size:13px;color:var(--muted);padding:12px 16px;border-top:1px solid var(--line)}
@@ -119,6 +125,21 @@ footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:13px;c
   <hr>
 
   <section>
+      <div class="wrap">
+        <div class="head"><span class="eyebrow">DK Filming</span><div><h2>DK 영해 촬영</h2><p>13:00 ~ 14:30 · DK · 촬영팀</p></div></div>
+        <ol class="shoot">
+          <li><span class="n">01</span><h3>이웃사촌마을지원센터</h3><p>김성용 센터장님과 인사를 나누고, 이웃사촌마을 사업의 취지를 소개받습니다.</p></li>
+          <li><span class="n">02</span><h3>근대역사거리</h3><p>담당 주무관이 동행합니다. 주무관과 이야기를 나누면서 근대역사거리를 자연스럽게 함께 걷습니다.</p></li>
+          <li><span class="n">03</span><h3>창업자 가게</h3><p>근대역사거리를 거닐다가 자연스럽게 창업자 가게에 들릅니다. 음료나 디저트를 맛보고, 나오면서 “이따가 공연에 꼭 오세요” 하고 초대 인사를 건넵니다.</p></li>
+          <li><span class="n">04</span><h3>3·18만세 전통시장</h3><p>지금 이 시장은 평일에는 사람이 거의 없습니다. 제주도 동문시장이나 강릉 중앙시장처럼, 언제나 사람이 북적이는 전통시장이 됐으면 하는 바람을 이야기합니다. 영해만의 특별한 먹거리 문화가 이 시장에 생겨난다면, 관광객들이 찾아오지 않을까요? 다른 시장과 짧게 비교해 본 뒤 촬영을 마무리합니다.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <hr>
+
+    
+<section>
     <div class="wrap">
       <div class="head"><span class="eyebrow">Cue Sheet</span><div><h2>큐시트</h2><p>사전 일정, 사전 스몰토크, 본공연 순서와 곡목입니다. 이미지를 눌러 크게 볼 수 있습니다.</p></div></div>
       <figure class="cue">
