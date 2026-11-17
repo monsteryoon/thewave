@@ -82,6 +82,14 @@ section{padding-block:clamp(48px,6vw,80px)}
 .poster{margin:0;border-radius:6px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.12)}
 .poster img{display:block;width:100%;height:auto}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.tabs{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:8px;padding-block:14px;flex-wrap:wrap}
+.tab{font:inherit;font-size:15px;font-weight:700;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;min-height:44px}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.tab small{font-weight:500;font-size:12px;margin-left:6px;opacity:.75}
+.panel[hidden]{display:none!important}
+.talk-tt td.who{white-space:nowrap;color:var(--muted)}
+.talk-tt tr.hl td{font-weight:700}
 .cue{margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
 .cue img{display:block;width:100%;height:auto}
 .cue figcaption{font-size:13px;color:var(--muted);padding:12px 16px;border-top:1px solid var(--line)}
@@ -113,7 +121,34 @@ footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:13px;c
     </div>
   </div>
 
-  <hr>
+  <nav class="tabs" aria-label="일정 구분"><div class="wrap" role="tablist">
+      <button class="tab" role="tab" id="t-pre" aria-controls="p-pre" aria-selected="true">사전 토크<small>16:30</small></button>
+      <button class="tab" role="tab" id="t-main" aria-controls="p-main" aria-selected="false">DK 사전촬영 + 본공연<small>13:00 · 17:00</small></button>
+    </div></nav>
+
+    <div class="panel" id="p-pre" role="tabpanel" aria-labelledby="t-pre">
+    <section>
+      <div class="wrap">
+        <div class="head" style="margin-bottom:32px"><span class="eyebrow">Pre-Talk</span><div><h2>사전 스몰토크</h2><p>16:30 ~ 17:00 · 사회 MC 하루 · 군수·군의장·도의원이 영해 현안을 주민과 나눕니다.</p></div></div>
+        <table class="tt talk-tt">
+          <tbody>
+            <tr><th>16:30</th><td>오프닝 — 인사 · 내빈 소개</td><td class="who">MC 하루</td></tr>
+            <tr><th>16:32</th><td>인사말 — 내빈 인사 (각 2분)</td><td class="who">군수 → 군의장 → 도의원</td></tr>
+            <tr><th>16:38</th><td>토크 ① — 사업 취지 · 도비 확보 과정</td><td class="who">도의원</td></tr>
+            <tr><th>16:42</th><td>토크 ② — 고향 영해 소개 · 근대역사</td><td class="who">군의장</td></tr>
+            <tr><th>16:46</th><td>주민 한마디 — 영해 현안 · 바라는 점</td><td class="who">주민 2~3명</td></tr>
+            <tr><th>16:49</th><td>토크 ③ — 주민 의견 답변 · 약속</td><td class="who">군수</td></tr>
+            <tr class="hl"><th>16:53</th><td>축하 공연 — 영웅 (MR)</td><td class="who">뮤지컬 배우 장유찬</td></tr>
+            <tr><th>16:58</th><td>클로징 — 감사 인사 · 기념촬영</td><td class="who">MC 하루 · 내빈</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:24px;color:var(--muted);font-size:15px">17:00 본공연은 DK '심'으로 바로 이어집니다.</p>
+      </div>
+    </section>
+    </div>
+
+    <div class="panel" id="p-main" role="tabpanel" aria-labelledby="t-main" hidden>
+
 
   <section>
     <div class="wrap">
@@ -286,6 +321,7 @@ footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:13px;c
       </div>
     </div>
   </section>
+    </div>
 </main>
 
 <footer>
@@ -293,6 +329,14 @@ footer{border-top:1px solid var(--line);padding-block:32px 48px;font-size:13px;c
 </footer>
 <script>
 document.getElementById('cueLink').addEventListener('click',function(e){e.preventDefault();var w=window.open();if(w){w.document.write('<title>큐시트</title><img src="'+document.getElementById('cueImg').src+'" style="width:100%">');}else{window.location.hash='';}});
+</script>
+<script>
+/* crew tabs */
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function pick(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});window.scrollTo({top:document.querySelector(".tabs").offsetTop,behavior:'smooth'});}
+  tabs.forEach(function(t){t.addEventListener('click',function(){pick(t)});});
+})();
 </script>
 </body>
 </html>
